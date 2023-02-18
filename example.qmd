@@ -1,0 +1,35 @@
+---
+title: "Material-icons Example"s
+author: Shafayet Khan Shafee
+date: last-modified
+date-format: "DD MMM, YYYY"
+code-tools: true
+---
+
+## icons
+
+[`Material Icons`](https://fonts.google.com/icons?icon.style=Filled&icon.set=Material+Icons) in Quarto.
+
+{{< mi assignment >}} {{< mi verified_user >}}
+
+## Sizing
+
+Although the icons in the font can be scaled to any size, in accordance with [material design icons guidelines](https://www.google.com/design/spec/iconography/system-icons.html), it is recommended the icons to be shown in either 18, 24, 36 or 48px. The default being `24px`.
+
+You can either use predefined sizing classes `md-18`, `md-24`, `md-36`, `md-48` (which uses 18px, 24px, 36px and 48px as font-size respectively) and pass them with `class` keyowrd argument to {{{< mi >}}} shortcode.
+
+```{shortcodes=false}
+{{< mi article >}} {{< mi article class="md-24" >}} {{< mi article class="md-36" >}} {{< mi article class="md-48" >}}
+```
+
+{{< mi article >}} {{< mi article class="md-24" >}} {{< mi article class="md-36" >}} {{< mi article class="md-48" >}}
+
+or you can also pass any arbitrary font-size in `px`, `em`, `rem`, `vw` or `vh` css units with the `size` keyword argument.
+
+```{shortcodes=false}
+{{< mi article size=20px >}} {{< mi article size=24px >}} {{< mi article size=2em >}} {{< mi article size=10vh >}}
+```
+
+
+{{< mi article size=20px >}} {{< mi article size=24px >}} {{< mi article size=2em >}} {{< mi article size=10vh >}}
+
