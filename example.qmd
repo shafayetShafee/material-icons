@@ -1,35 +1,138 @@
 ---
-title: "Material-icons Example"s
+title: "Material-icons Example"
 author: Shafayet Khan Shafee
 date: last-modified
 date-format: "DD MMM, YYYY"
 code-tools: true
+engine: knitr
+toc: true
+embed-resources: true
 ---
 
-## icons
+## Icons
 
-[`Material Icons`](https://fonts.google.com/icons?icon.style=Filled&icon.set=Material+Icons) in Quarto.
+To use [`Material Icons`](https://fonts.google.com/icons?icon.style=Filled&icon.set=Material+Icons) in Quarto, use the {{{< mi >}}} shortcode.
 
-{{< mi assignment >}} {{< mi verified_user >}}
+And you need to pass the icon name to this shortcode. To get the icon names, go to the Google's webpage of [Material Icons](https://fonts.google.com/icons?icon.style=Filled&icon.set=Material+Icons), click on the icon that you want to use, then a window from right will pop up with the icon name. Suppose you clicked on the icon `Account Circle`, then on the popped up window you will see the icon name `account_circle`, use this name in the shortcode.
+
+
+| Icons          | Shortcode                   | Preview                   |
+|----------------|-----------------------------|---------------------------|
+| Account Circle | {{{< mi account_circle >}}} | {{< mi account_circle >}} |
+| Assignment     | {{{< mi assignment >}}}     | {{< mi assignment >}}     |
+| Verified User  | {{{< mi verified_user >}}}  | {{< mi verified_user >}}  |
+
+
+## Types
+
+Material Icons comes in five types which are `filled` (default used in the shortcode), `outlined`, `sharp`, `two_tone`, and `round`. you can pass these theme name as the second argument after the icon name to the shortcode. If you do not pass any theme name, by default `filled` will be used.
+
+| Type       | Shortcode                            | Preview                            |
+|------------|--------------------------------------|------------------------------------|
+| `filled`   | {{{< mi analytics >}}}               | {{< mi analytics >}}               |
+| `outlined` | {{{< mi analytics type=outlined >}}} | {{< mi analytics type=outlined >}} |
+| `tow_tone` | {{{< mi analytics type=two_tone >}}} | {{< mi analytics type=two_tone >}} |
+| `sharp`    | {{{< mi analytics type=sharp >}}}    | {{< mi analytics type=sharp >}}    |
+| `round`    | {{{< mi analytics type=round >}}}    | {{< mi analytics type=round >}}    |
+
 
 ## Sizing
 
 Although the icons in the font can be scaled to any size, in accordance with [material design icons guidelines](https://www.google.com/design/spec/iconography/system-icons.html), it is recommended the icons to be shown in either 18, 24, 36 or 48px. The default being `24px`.
 
-You can either use predefined sizing classes `md-18`, `md-24`, `md-36`, `md-48` (which uses 18px, 24px, 36px and 48px as font-size respectively) and pass them with `class` keyowrd argument to {{{< mi >}}} shortcode.
+you can pass any arbitrary font-size in `px`, `em`, `rem`, `vw` or `vh` css units with the `size` keyword argument.
 
-```{shortcodes=false}
-{{< mi article >}} {{< mi article class="md-24" >}} {{< mi article class="md-36" >}} {{< mi article class="md-48" >}}
+
+| Shortcode                        | Preview                        |
+|----------------------------------|--------------------------------|
+| {{{< mi bar_chart >}}}           | {{< mi bar_chart >}}           |
+| {{{< mi bar_chart size=24px >}}} | {{< mi bar_chart size=24px >}} |
+| {{{< mi bar_chart size=36px >}}} | {{< mi bar_chart size=36px >}} |
+| {{{< mi bar_chart size=48px >}}} | {{< mi bar_chart size=48px >}} |
+| {{{< mi bar_chart size=60px >}}} | {{< mi bar_chart size=60px >}} |
+| {{{< mi bar_chart size=4em >}}}  | {{< mi bar_chart size=4em >}}  |
+
+
+## Coloring
+
+Using the icon font allows for easy styling of an icon in any color. In accordance with [material design icons guidelines](https://www.google.com/design/spec/iconography/system-icons.html), for active icons it is recommended using either black at 54% opacity or white at 100% opacity when displaying these on light or dark backgrounds, respectively. If an icon is disabled or inactive, using black at 26% or white at 30% for light and dark backgrounds, respectively.
+
+you can use predefined css class `md-dark`, `md-light`, `md-inactive` to follow the above suggestion and pass these class to the shortcode using `class` keyword argument. To pass multiple classes, pass them as space separated wrapped within quotes.
+
+
+| Shortcode                                         | Preview in white background                     |
+|---------------------------------------------------|-------------------------------------------------|
+| {{{< mi insights class=md-dark >}}}               | {{< mi insights class=md-dark >}}               |
+| {{{< mi insights class="md-dark md-inactive" >}}} | {{< mi insights class="md-dark md-inactive" >}} |
+
+
+Example for drawing an icon on a dark background with a light foreground color,
+
+```{css, echo=FALSE}
+.dark-bg {
+  background-color: black;
+  padding: 10px;
+  margin: 20px;
+}
 ```
 
-{{< mi article >}} {{< mi article class="md-24" >}} {{< mi article class="md-36" >}} {{< mi article class="md-48" >}}
 
-or you can also pass any arbitrary font-size in `px`, `em`, `rem`, `vw` or `vh` css units with the `size` keyword argument.
+| Shortcode                                          | Preview in dark background                       |
+|----------------------------------------------------|--------------------------------------------------|
+| {{{< mi insights class=md-light >}}}               | [{{< mi insights class=md-light >}}]{.dark-bg}               |
+| {{{< mi insights class="md-light md-inactive" >}}} | [{{< mi insights class="md-light md-inactive" >}}]{.dark-bg} |
 
-```{shortcodes=false}
-{{< mi article size=20px >}} {{< mi article size=24px >}} {{< mi article size=2em >}} {{< mi article size=10vh >}}
+
+*Note: These icon themseleves does not come with dark background, you need to create dark background yourselves. Click `</> Code` on top right of this document, to see how I have created in this case for an example.*
+
+
+But of course, you can pass any arbitrary valid css colors using `color` keyword argument. To specify a color for icons, you can use css [named colors](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#named_colors) (i.e. `red`, `cornflowerblue` etc), Hex values, [RGB color model](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#rgb_color_model) or [HSL color model](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#hsl_color_model).
+
+*The complete list of available named color is [here](https://developer.mozilla.org/en-US/docs/Web/CSS/named-color).*
+
+
+| Shortcodes                                             | Preview                                            |
+|--------------------------------------------------------|----------------------------------------------------|
+| {{{< mi bubble_chart color=cornflowerblue >}}}         | {{< mi bubble_chart color=cornflowerblue >}}       |
+| {{{< mi bubble_chart color=#E86033 >}}}                | {{< mi bubble_chart color=#E86033 >}}              |
+| {{{< mi bubble_chart color=rgb(232,96,51) >}}}         | {{< mi bubble_chart color=rgb(232,96,51) >}}       |
+| {{{< mi bubble_chart color=rgba(232,96,51,1) >}}}      | {{< mi bubble_chart color=rgba(232,96,51,1) >}}    |
+| {{{< mi bubble_chart color=hsl(15,80%,56%) >}}}        | {{< mi bubble_chart color=hsl(15,80%,56%) >}}      |
+| {{{< mi bubble_chart color=hsla(15,80%,56%,360) >}}}   | {{< mi bubble_chart color=hsla(15,80%,56%,360) >}} |
+
+
+## Using Class
+
+You can define a css class with all of the above properties and more and then pass it to the shortcode using `class` keyword.
+
+```{.css filename="CSS class"}
+.styled {
+  color: crimson;
+  font-size: 4em;
+  background-color: bisque;
+  padding: 10px;
+  border-radius: 10%;
+  -webkit-box-shadow: 0px 0px 12px 10px rgb(255 112 112 / 65%);
+  -moz-box-shadow: 0px 0px 12px 10px rgba(255,112,112,0.65);
+  box-shadow: 0px 0px 12px 10px rgb(255 112 112 / 65%);
+}
+```
+
+```{css, echo=FALSE}
+.styled {
+  color: crimson;
+  font-size: 4em;
+  background-color: bisque;
+  padding: 10px;
+  border-radius: 10%;
+  -webkit-box-shadow: 0px 0px 12px 10px rgb(255 112 112 / 65%);
+  -moz-box-shadow: 0px 0px 12px 10px rgba(255,112,112,0.65);
+  box-shadow: 0px 0px 12px 10px rgb(255 112 112 / 65%);
+}
 ```
 
 
-{{< mi article size=20px >}} {{< mi article size=24px >}} {{< mi article size=2em >}} {{< mi article size=10vh >}}
-
+| Shortcodes                                | Preview                                 |
+|-------------------------------------------|-----------------------------------------|
+| {{{< mi waterfall_chart class=styled >}}} | {{< mi waterfall_chart class=styled >}} |
+| {{{< mi schema class=styled >}}}          | {{< mi schema class=styled >}}          |

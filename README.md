@@ -1,23 +1,17 @@
 # Material-icons Extension For Quarto
 
-_TODO_: Add a short description of your extension.
+A [Quarto](https://quarto.org/) shortcode extension to use [Google Material Design Icons](https://fonts.google.com/icons?icon.set=Material+Icons&icon.query=chart) in HTML documents and Revealjs Presentations.
 
 ## Installing
 
-_TODO_: Replace the `<github-organization>` with your GitHub organization.
-
 ```bash
-quarto add <github-organization>/material-icons
+quarto add shafayetShafee/material-icons
 ```
 
 This will install the extension under the `_extensions` subdirectory.
 If you're using version control, you will want to check in this directory.
 
-## Using
+## Using and Example
 
-_TODO_: Describe how to use your extension.
-
-## Example
-
-Here is the source code for a minimal example: [example.qmd](example.qmd).
+[`Read the documentation here`](https://shafayetshafee.github.io/material-icons/example.html)
 
