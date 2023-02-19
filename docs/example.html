@@ -2867,6 +2867,7 @@ margin: 20px;
 </tr>
 </tbody>
 </table>
+<p><strong>Note that, when specifying color with either RGB or HSL model, DO NOT PUT SPACE BETWEEN VALUES. That is, do not write as rgb(232, 96, 51), instead write as rgb(232,96,51), otherwise it will not work.</strong></p>
 </section>
 <section id="using-class" class="level2">
 <h2 class="anchored" data-anchor-id="using-class">Using Class</h2>
@@ -3215,41 +3216,43 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a>| {{{&lt; mi bubble_chart color=hsla(15,80%,56%,360) &gt;}}}   | {{&lt; mi bubble_chart color=hsla(15,80%,56%,360) &gt;}} |</span>
 <span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a><span class="fu">## Using Class</span></span>
+<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a>**Note that, when specifying color with either RGB or HSL model, DO NOT PUT SPACE BETWEEN VALUES. That is, do not write as rgb(232, 96, 51), instead write as rgb(232,96,51), otherwise it will not work.**</span>
 <span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-106"><a href="#cb2-106" aria-hidden="true" tabindex="-1"></a>You can define a css class with all of the above properties and more and then pass it to the shortcode using <span class="in">`class`</span> keyword.</span>
+<span id="cb2-106"><a href="#cb2-106" aria-hidden="true" tabindex="-1"></a><span class="fu">## Using Class</span></span>
 <span id="cb2-107"><a href="#cb2-107" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a><span class="in">```{.css filename=&quot;CSS class&quot;}</span></span>
-<span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a><span class="op">.</span><span class="fu">styled</span> <span class="op">{</span></span>
-<span id="cb2-110"><a href="#cb2-110" aria-hidden="true" tabindex="-1"></a>  color<span class="op">:</span> crimson<span class="op">;</span></span>
-<span id="cb2-111"><a href="#cb2-111" aria-hidden="true" tabindex="-1"></a>  font<span class="op">-</span>size<span class="op">:</span> 4em<span class="op">;</span></span>
-<span id="cb2-112"><a href="#cb2-112" aria-hidden="true" tabindex="-1"></a>  background<span class="op">-</span>color<span class="op">:</span> bisque<span class="op">;</span></span>
-<span id="cb2-113"><a href="#cb2-113" aria-hidden="true" tabindex="-1"></a>  padding<span class="op">:</span> 10px<span class="op">;</span></span>
-<span id="cb2-114"><a href="#cb2-114" aria-hidden="true" tabindex="-1"></a>  border<span class="op">-</span>radius<span class="op">:</span> <span class="dv">10</span><span class="op">%;</span></span>
-<span id="cb2-115"><a href="#cb2-115" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span>webkit<span class="op">-</span>box<span class="op">-</span>shadow<span class="op">:</span> 0px 0px 12px 10px <span class="fu">rgb</span><span class="op">(</span><span class="dv">255</span> <span class="dv">112</span> <span class="dv">112</span> <span class="op">/</span> <span class="dv">65</span><span class="op">%);</span></span>
-<span id="cb2-116"><a href="#cb2-116" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span>moz<span class="op">-</span>box<span class="op">-</span>shadow<span class="op">:</span> 0px 0px 12px 10px <span class="fu">rgba</span><span class="op">(</span><span class="dv">255</span><span class="op">,</span><span class="dv">112</span><span class="op">,</span><span class="dv">112</span><span class="op">,</span><span class="fl">0.65</span><span class="op">);</span></span>
-<span id="cb2-117"><a href="#cb2-117" aria-hidden="true" tabindex="-1"></a>  box<span class="op">-</span>shadow<span class="op">:</span> 0px 0px 12px 10px <span class="fu">rgb</span><span class="op">(</span><span class="dv">255</span> <span class="dv">112</span> <span class="dv">112</span> <span class="op">/</span> <span class="dv">65</span><span class="op">%);</span></span>
-<span id="cb2-118"><a href="#cb2-118" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
-<span id="cb2-119"><a href="#cb2-119" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-120"><a href="#cb2-120" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-121"><a href="#cb2-121" aria-hidden="true" tabindex="-1"></a><span class="in">```{css, echo=FALSE}</span></span>
-<span id="cb2-122"><a href="#cb2-122" aria-hidden="true" tabindex="-1"></a><span class="op">.</span><span class="fu">styled</span> <span class="op">{</span></span>
-<span id="cb2-123"><a href="#cb2-123" aria-hidden="true" tabindex="-1"></a>  color<span class="op">:</span> crimson<span class="op">;</span></span>
-<span id="cb2-124"><a href="#cb2-124" aria-hidden="true" tabindex="-1"></a>  font<span class="op">-</span>size<span class="op">:</span> 4em<span class="op">;</span></span>
-<span id="cb2-125"><a href="#cb2-125" aria-hidden="true" tabindex="-1"></a>  background<span class="op">-</span>color<span class="op">:</span> bisque<span class="op">;</span></span>
-<span id="cb2-126"><a href="#cb2-126" aria-hidden="true" tabindex="-1"></a>  padding<span class="op">:</span> 10px<span class="op">;</span></span>
-<span id="cb2-127"><a href="#cb2-127" aria-hidden="true" tabindex="-1"></a>  border<span class="op">-</span>radius<span class="op">:</span> <span class="dv">10</span><span class="op">%;</span></span>
-<span id="cb2-128"><a href="#cb2-128" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span>webkit<span class="op">-</span>box<span class="op">-</span>shadow<span class="op">:</span> 0px 0px 12px 10px <span class="fu">rgb</span><span class="op">(</span><span class="dv">255</span> <span class="dv">112</span> <span class="dv">112</span> <span class="op">/</span> <span class="dv">65</span><span class="op">%);</span></span>
-<span id="cb2-129"><a href="#cb2-129" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span>moz<span class="op">-</span>box<span class="op">-</span>shadow<span class="op">:</span> 0px 0px 12px 10px <span class="fu">rgba</span><span class="op">(</span><span class="dv">255</span><span class="op">,</span><span class="dv">112</span><span class="op">,</span><span class="dv">112</span><span class="op">,</span><span class="fl">0.65</span><span class="op">);</span></span>
-<span id="cb2-130"><a href="#cb2-130" aria-hidden="true" tabindex="-1"></a>  box<span class="op">-</span>shadow<span class="op">:</span> 0px 0px 12px 10px <span class="fu">rgb</span><span class="op">(</span><span class="dv">255</span> <span class="dv">112</span> <span class="dv">112</span> <span class="op">/</span> <span class="dv">65</span><span class="op">%);</span></span>
-<span id="cb2-131"><a href="#cb2-131" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
-<span id="cb2-132"><a href="#cb2-132" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-133"><a href="#cb2-133" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-134"><a href="#cb2-134" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-135"><a href="#cb2-135" aria-hidden="true" tabindex="-1"></a>| Shortcodes                                | Preview                                 |</span>
-<span id="cb2-136"><a href="#cb2-136" aria-hidden="true" tabindex="-1"></a>|-------------------------------------------|-----------------------------------------|</span>
-<span id="cb2-137"><a href="#cb2-137" aria-hidden="true" tabindex="-1"></a>| {{{&lt; mi waterfall_chart class=styled &gt;}}} | {{&lt; mi waterfall_chart class=styled &gt;}} |</span>
-<span id="cb2-138"><a href="#cb2-138" aria-hidden="true" tabindex="-1"></a>| {{{&lt; mi schema class=styled &gt;}}}          | {{&lt; mi schema class=styled &gt;}}          |</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a>You can define a css class with all of the above properties and more and then pass it to the shortcode using <span class="in">`class`</span> keyword.</span>
+<span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-110"><a href="#cb2-110" aria-hidden="true" tabindex="-1"></a><span class="in">```{.css filename=&quot;CSS class&quot;}</span></span>
+<span id="cb2-111"><a href="#cb2-111" aria-hidden="true" tabindex="-1"></a><span class="op">.</span><span class="fu">styled</span> <span class="op">{</span></span>
+<span id="cb2-112"><a href="#cb2-112" aria-hidden="true" tabindex="-1"></a>  color<span class="op">:</span> crimson<span class="op">;</span></span>
+<span id="cb2-113"><a href="#cb2-113" aria-hidden="true" tabindex="-1"></a>  font<span class="op">-</span>size<span class="op">:</span> 4em<span class="op">;</span></span>
+<span id="cb2-114"><a href="#cb2-114" aria-hidden="true" tabindex="-1"></a>  background<span class="op">-</span>color<span class="op">:</span> bisque<span class="op">;</span></span>
+<span id="cb2-115"><a href="#cb2-115" aria-hidden="true" tabindex="-1"></a>  padding<span class="op">:</span> 10px<span class="op">;</span></span>
+<span id="cb2-116"><a href="#cb2-116" aria-hidden="true" tabindex="-1"></a>  border<span class="op">-</span>radius<span class="op">:</span> <span class="dv">10</span><span class="op">%;</span></span>
+<span id="cb2-117"><a href="#cb2-117" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span>webkit<span class="op">-</span>box<span class="op">-</span>shadow<span class="op">:</span> 0px 0px 12px 10px <span class="fu">rgb</span><span class="op">(</span><span class="dv">255</span> <span class="dv">112</span> <span class="dv">112</span> <span class="op">/</span> <span class="dv">65</span><span class="op">%);</span></span>
+<span id="cb2-118"><a href="#cb2-118" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span>moz<span class="op">-</span>box<span class="op">-</span>shadow<span class="op">:</span> 0px 0px 12px 10px <span class="fu">rgba</span><span class="op">(</span><span class="dv">255</span><span class="op">,</span><span class="dv">112</span><span class="op">,</span><span class="dv">112</span><span class="op">,</span><span class="fl">0.65</span><span class="op">);</span></span>
+<span id="cb2-119"><a href="#cb2-119" aria-hidden="true" tabindex="-1"></a>  box<span class="op">-</span>shadow<span class="op">:</span> 0px 0px 12px 10px <span class="fu">rgb</span><span class="op">(</span><span class="dv">255</span> <span class="dv">112</span> <span class="dv">112</span> <span class="op">/</span> <span class="dv">65</span><span class="op">%);</span></span>
+<span id="cb2-120"><a href="#cb2-120" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb2-121"><a href="#cb2-121" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-122"><a href="#cb2-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-123"><a href="#cb2-123" aria-hidden="true" tabindex="-1"></a><span class="in">```{css, echo=FALSE}</span></span>
+<span id="cb2-124"><a href="#cb2-124" aria-hidden="true" tabindex="-1"></a><span class="op">.</span><span class="fu">styled</span> <span class="op">{</span></span>
+<span id="cb2-125"><a href="#cb2-125" aria-hidden="true" tabindex="-1"></a>  color<span class="op">:</span> crimson<span class="op">;</span></span>
+<span id="cb2-126"><a href="#cb2-126" aria-hidden="true" tabindex="-1"></a>  font<span class="op">-</span>size<span class="op">:</span> 4em<span class="op">;</span></span>
+<span id="cb2-127"><a href="#cb2-127" aria-hidden="true" tabindex="-1"></a>  background<span class="op">-</span>color<span class="op">:</span> bisque<span class="op">;</span></span>
+<span id="cb2-128"><a href="#cb2-128" aria-hidden="true" tabindex="-1"></a>  padding<span class="op">:</span> 10px<span class="op">;</span></span>
+<span id="cb2-129"><a href="#cb2-129" aria-hidden="true" tabindex="-1"></a>  border<span class="op">-</span>radius<span class="op">:</span> <span class="dv">10</span><span class="op">%;</span></span>
+<span id="cb2-130"><a href="#cb2-130" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span>webkit<span class="op">-</span>box<span class="op">-</span>shadow<span class="op">:</span> 0px 0px 12px 10px <span class="fu">rgb</span><span class="op">(</span><span class="dv">255</span> <span class="dv">112</span> <span class="dv">112</span> <span class="op">/</span> <span class="dv">65</span><span class="op">%);</span></span>
+<span id="cb2-131"><a href="#cb2-131" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span>moz<span class="op">-</span>box<span class="op">-</span>shadow<span class="op">:</span> 0px 0px 12px 10px <span class="fu">rgba</span><span class="op">(</span><span class="dv">255</span><span class="op">,</span><span class="dv">112</span><span class="op">,</span><span class="dv">112</span><span class="op">,</span><span class="fl">0.65</span><span class="op">);</span></span>
+<span id="cb2-132"><a href="#cb2-132" aria-hidden="true" tabindex="-1"></a>  box<span class="op">-</span>shadow<span class="op">:</span> 0px 0px 12px 10px <span class="fu">rgb</span><span class="op">(</span><span class="dv">255</span> <span class="dv">112</span> <span class="dv">112</span> <span class="op">/</span> <span class="dv">65</span><span class="op">%);</span></span>
+<span id="cb2-133"><a href="#cb2-133" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb2-134"><a href="#cb2-134" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-135"><a href="#cb2-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-136"><a href="#cb2-136" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-137"><a href="#cb2-137" aria-hidden="true" tabindex="-1"></a>| Shortcodes                                | Preview                                 |</span>
+<span id="cb2-138"><a href="#cb2-138" aria-hidden="true" tabindex="-1"></a>|-------------------------------------------|-----------------------------------------|</span>
+<span id="cb2-139"><a href="#cb2-139" aria-hidden="true" tabindex="-1"></a>| {{{&lt; mi waterfall_chart class=styled &gt;}}} | {{&lt; mi waterfall_chart class=styled &gt;}} |</span>
+<span id="cb2-140"><a href="#cb2-140" aria-hidden="true" tabindex="-1"></a>| {{{&lt; mi schema class=styled &gt;}}}          | {{&lt; mi schema class=styled &gt;}}          |</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

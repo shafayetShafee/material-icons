@@ -4,6 +4,8 @@ A [Quarto](https://quarto.org/) shortcode extension to use [Google Material Desi
 
 ## Installing
 
+:warning: This extension requires using quarto version at least 1.2.
+
 ```bash
 quarto add shafayetShafee/material-icons
 ```
